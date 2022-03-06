@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text,  SafeAreaView } from "react-native";
+import { View, Image, Text,  SafeAreaView } from "react-native";
 import AppStatusBar from "../../components/AppStatusBar/AppStatusBar";
 import styles from "./styles";
 
@@ -9,9 +9,10 @@ class DebitCardScreen extends Component {
       <View style={styles.container}>
         <AppStatusBar />
         <SafeAreaView>
-         <Text>Profile!</Text>
+          <Image source={require('../../assets/logo.png')} 
+            style={styles.logoImage}/>
+          <Text style={styles.screenHeader} >Debit Card</Text>
         </SafeAreaView>
-        
       </View>
     );
   }
