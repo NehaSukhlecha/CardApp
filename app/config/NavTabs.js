@@ -1,26 +1,33 @@
 import React from "react";
+import { Image } from 'react-native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import DebitCardScreen from '../screens/DebitCardScreen';
 import DebitLimitScreen from '../screens/DebitLimitScreen';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
 const NavTabs = () => {
   return (
     <Tab.Navigator
-      initialRouteName="Home"
-      activeColor="#e91e63"
-      labelStyle={{ fontSize: 12 }}
-      style={{ backgroundColor: 'tomato' }}>
+      initialRouteName="DebitCard"
+      activeColor="#01D167"
+      inactiveColor="#DDDDDD"
+      labelStyle={{ fontSize: 12 }}>
 
       <Tab.Screen
         name="Home"
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Home',
-        //   tabBarIcon: ({ color }) => (
-        //     <MaterialCommunityIcons name="home" color={color} size={26} />
-        //   ),
+          tabBarColor: '#ffffff',
+          tabBarIcon: ({ color }) => (
+            <Image
+              source={require('../assets/logo.png')}
+              style={{width: 24, height: 24, tintColor: color}}
+            />
+          ),
       }}/>
 
       <Tab.Screen
@@ -28,9 +35,10 @@ const NavTabs = () => {
         component={DebitCardScreen}
         options={{
           tabBarLabel: 'Debit Card',
-        //   tabBarIcon: ({ color }) => (
-        //     <MaterialCommunityIcons name="bell" color={color} size={26} />
-        //   ),
+          tabBarColor: '#ffffff',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="contactless-payment" color={color} size={24} />
+          ),
       }}/>
 
       <Tab.Screen
@@ -38,9 +46,10 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Payment',
-        //   tabBarIcon: ({ color }) => (
-        //     <MaterialCommunityIcons name="account" color={color} size={26} />
-        //   ),
+          tabBarColor: '#ffffff',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="credit-card" color={color} size={24} />
+          ),
       }}/>
 
       <Tab.Screen
@@ -48,9 +57,10 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Credit',
-        //   tabBarIcon: ({ color }) => (
-        //     <MaterialCommunityIcons name="account" color={color} size={26} />
-        //   ),
+          tabBarColor: '#ffffff',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="arrow-up-drop-circle" color={color} size={24} />
+          ),
       }}/>
         
       <Tab.Screen
@@ -58,9 +68,10 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Profile',
-        //   tabBarIcon: ({ color }) => (
-        //     <MaterialCommunityIcons name="account" color={color} size={26} />
-        //   ),
+          tabBarColor: '#ffffff',
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="face-man-profile" color={color} size={24} />
+          ),
       }}/>
 
     </Tab.Navigator>
