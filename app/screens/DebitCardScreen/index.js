@@ -1,12 +1,17 @@
 import React, { Component } from "react";
-import { View, Text } from "react-native";
+import { View, Text,  SafeAreaView } from "react-native";
+import AppStatusBar from "../../components/AppStatusBar/AppStatusBar";
 import styles from "./styles";
 
 class DebitCardScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Profile!</Text>
+      <View style={styles.container}>
+        <AppStatusBar />
+        <SafeAreaView>
+         <Text>Profile!</Text>
+        </SafeAreaView>
+        
       </View>
     );
   }

@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import DebitCardScreen from '../screens/DebitCardScreen';
 import DebitLimitScreen from '../screens/DebitLimitScreen';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AppColor from "../utills/AppColors";
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -12,8 +13,8 @@ const NavTabs = () => {
   return (
     <Tab.Navigator
       initialRouteName="DebitCard"
-      activeColor="#01D167"
-      inactiveColor="#DDDDDD"
+      activeColor={AppColor.tabActive}
+      inactiveColor={AppColor.tabInactive}
       labelStyle={{ fontSize: 12 }}>
 
       <Tab.Screen
@@ -21,7 +22,7 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Home',
-          tabBarColor: '#ffffff',
+          tabBarColor: AppColor.tabBackground,
           tabBarIcon: ({ color }) => (
             <Image
               source={require('../assets/logo.png')}
@@ -35,7 +36,7 @@ const NavTabs = () => {
         component={DebitCardScreen}
         options={{
           tabBarLabel: 'Debit Card',
-          tabBarColor: '#ffffff',
+          tabBarColor: AppColor.tabBackground,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="contactless-payment" color={color} size={24} />
           ),
@@ -46,7 +47,7 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Payment',
-          tabBarColor: '#ffffff',
+          tabBarColor: AppColor.tabBackground,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="credit-card" color={color} size={24} />
           ),
@@ -57,7 +58,7 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Credit',
-          tabBarColor: '#ffffff',
+          tabBarColor: AppColor.tabBackground,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="arrow-up-drop-circle" color={color} size={24} />
           ),
@@ -68,7 +69,7 @@ const NavTabs = () => {
         component={DebitLimitScreen}
         options={{
           tabBarLabel: 'Profile',
-          tabBarColor: '#ffffff',
+          tabBarColor: AppColor.tabBackground,
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="face-man-profile" color={color} size={24} />
           ),
