@@ -1,5 +1,6 @@
 import { StyleSheet } from 'react-native';
 import AppColor from '../../utills/AppColors';
+import AppConstants from '../../utills/AppConstants';
 
 const LOGO_DIMENTION = 32;
 const TOP_MARGIN = 18;
@@ -20,14 +21,50 @@ export default StyleSheet.create({
     },
     screenHeader: {
       position: "absolute",
-      left: RIGHT_LEFT_MARGIN,
+      marginLeft: RIGHT_LEFT_MARGIN,
       color: AppColor.textColor,
       fontFamily: "AvenirNextLTPro-Bold",
-      fontSize: 33,
+      fontSize: 30,
       width: "100%",
-      height: LOGO_DIMENTION + LOGO_DIMENTION /2 + TOP_MARGIN,
-      top: LOGO_DIMENTION /2 + TOP_MARGIN,
+      top: AppConstants.SCREEN_HEIGHT * 0.05,
     },
-    
+    balanceText: {
+      position: "absolute",
+      marginLeft: RIGHT_LEFT_MARGIN,
+      color: AppColor.textColor,
+      fontFamily: "AvenirNextLTPro-Regular",
+      fontSize: 16,
+      width: "100%",
+      top: AppConstants.SCREEN_HEIGHT * 0.15,
+    },
+
+    balanceContainer: {
+      flexDirection: "row",
+      marginLeft: RIGHT_LEFT_MARGIN,
+      alignItems:"center",
+      marginTop: AppConstants.SCREEN_HEIGHT * 0.20,
+    },
+
+    currencyContainer: {
+      width: 40,
+      height: 22,
+      justifyContent:"center",
+      alignItems:"center",
+      backgroundColor: AppColor.themeColor,
+      borderRadius: 4,
+    },
+    currencyText: {
+      color: AppColor.textColor,
+      fontFamily: "AvenirNextLTPro-Bold",
+      alignSelf:"center",
+      fontSize: 12,
+    },
+    amountText: {
+      color: AppColor.textColor,
+      marginLeft: 10,
+      alignSelf:"center",
+      fontFamily: "AvenirNextLTPro-Bold",
+      fontSize: 24,
+    },
 });
   

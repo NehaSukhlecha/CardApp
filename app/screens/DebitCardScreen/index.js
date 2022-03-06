@@ -8,10 +8,17 @@ class DebitCardScreen extends Component {
     return (
       <View style={styles.container}>
         <AppStatusBar />
-        <SafeAreaView>
+        <SafeAreaView style={styles.mainContainer}>
           <Image source={require('../../assets/logo.png')} 
             style={styles.logoImage}/>
           <Text style={styles.screenHeader} >Debit Card</Text>
+          <Text style={styles.balanceText} >Available Balance</Text>
+          <View style={styles.balanceContainer}> 
+            <View style={styles.currencyContainer}> 
+                <Text style={styles.currencyText} >S$</Text>
+            </View>
+            <Text style={styles.amountText} >3,000</Text>
+          </View>
         </SafeAreaView>
       </View>
     );
