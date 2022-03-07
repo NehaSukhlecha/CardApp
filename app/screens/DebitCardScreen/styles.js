@@ -35,14 +35,14 @@ export default StyleSheet.create({
       fontFamily: "AvenirNextLTPro-Regular",
       fontSize: 16,
       width: "100%",
-      top: AppConstants.SCREEN_HEIGHT * 0.15,
+      top: AppConstants.SCREEN_HEIGHT * 0.13,
     },
 
     balanceContainer: {
       flexDirection: "row",
       marginLeft: RIGHT_LEFT_MARGIN,
       alignItems:"center",
-      marginTop: AppConstants.SCREEN_HEIGHT * 0.20,
+      marginTop: AppConstants.SCREEN_HEIGHT * 0.17,
     },
 
     currencyContainer: {
@@ -65,6 +65,27 @@ export default StyleSheet.create({
       alignSelf:"center",
       fontFamily: "AvenirNextLTPro-Bold",
       fontSize: 24,
+    },
+    cardContainer: {
+      width: '99%',
+      top: -70,
+      alignSelf:"flex-end",
+      height: AppConstants.SCREEN_HEIGHT * 0.25,
+      justifyContent:"center",
+      alignItems:"center",
+      backgroundColor: AppColor.themeColor,
+      borderRadius: 15,
+    },
+    hideButton: {
+      width: '50%',
+      top: -110,
+      alignSelf:'flex-end',
+      position: 'absolute',
+      height: AppConstants.SCREEN_HEIGHT * 0.25,
+      justifyContent:"center",
+      alignItems:"center",
+      backgroundColor: 'white',
+      borderRadius: 10,
     },
 });
   

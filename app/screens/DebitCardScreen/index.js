@@ -25,8 +25,8 @@ class DebitCardScreen extends Component {
             keyboardAware
             bottomSheerColor="#FFFFFF"
             ref="BottomSheet"
-            initialPosition={'70%'} //200, 300
-            snapPoints={['50%', '100%']}
+            initialPosition={'65%'} //200, 300
+            snapPoints={['65%', '100%']}
             // isBackDrop={true}
             enabledGestureInteraction={true}
             isBackDropDismissByPress={true}
@@ -34,12 +34,17 @@ class DebitCardScreen extends Component {
             // backDropColor="red"
             // //isModal
             // containerStyle={{backgroundColor:"red"}}
-            // tipStyle={{backgroundColor:"red"}}
-            // headerStyle={{backgroundColor:"red"}}
+            tipStyle={{backgroundColor:"white"}}
+            headerStyle={{borderRadius: 100}}
             // bodyStyle={{backgroundColor:"red",flex:1}}
             header={
-              <View>
-                <Text style={styles.text}>Header</Text>
+              <View >
+                <View style={styles.hideButton}> 
+                  <Text style={styles.currencyText} >S$</Text>
+                </View>
+                <View style={styles.cardContainer}> 
+                  <Text style={styles.currencyText} >S$</Text>
+                </View>
               </View>
             }
             body={
