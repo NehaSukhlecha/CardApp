@@ -71,8 +71,6 @@ export default StyleSheet.create({
       top: -70,
       alignSelf:"flex-end",
       height: AppConstants.SCREEN_HEIGHT * 0.25,
-      justifyContent:"center",
-      alignItems:"center",
       backgroundColor: AppColor.themeColor,
       borderRadius: 15,
     },
@@ -89,7 +87,6 @@ export default StyleSheet.create({
       backgroundColor: 'white',
       borderRadius: 10,
     },
-
     hideText: {
       color: AppColor.themeColor,
       fontFamily: "AvenirNextLTPro-Bold",

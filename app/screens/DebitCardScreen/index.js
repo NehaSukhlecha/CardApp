@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Image, Text,  SafeAreaView } from "react-native";
 import AppStatusBar from "../../components/AppStatusBar/AppStatusBar";
+import CardComponent from "../../components/CardComponent/CardComponent";
 import styles from "./styles";
 import BottomSheet from 'react-native-bottomsheet-reanimated';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -37,10 +38,10 @@ class DebitCardScreen extends Component {
             header={
               <View >
                 <View style={styles.hideButton}> 
-                  <Text style={styles.hideText}> <MaterialCommunityIcons name="eye-off" color= {AppColor.themeColor}  size={16} />    Hide Card Number</Text>
+                  <Text style={styles.hideText}> <MaterialCommunityIcons name="eye-off" color= {AppColor.themeColor}  size={16} />  Hide Card Number</Text>
                 </View>
                 <View style={styles.cardContainer}> 
-                  <Text style={styles.currencyText} >S$</Text>
+                  <CardComponent></CardComponent>
                 </View>
               </View>
             }
