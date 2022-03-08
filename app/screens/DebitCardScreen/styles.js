@@ -77,15 +77,24 @@ export default StyleSheet.create({
       borderRadius: 15,
     },
     hideButton: {
-      width: '50%',
-      top: -110,
+      width: '45%',
+      top: -100,
       alignSelf:'flex-end',
+      padding:5,
       position: 'absolute',
-      height: AppConstants.SCREEN_HEIGHT * 0.25,
+      flexDirection:"row",
+      height: 50,
+      alignContent:"center",
       justifyContent:"center",
-      alignItems:"center",
       backgroundColor: 'white',
       borderRadius: 10,
+    },
+
+    hideText: {
+      color: AppColor.themeColor,
+      fontFamily: "AvenirNextLTPro-Bold",
+      justifyContent:"center",
+      fontSize: 12,
     },
 });
   

@@ -3,6 +3,8 @@ import { View, Image, Text,  SafeAreaView } from "react-native";
 import AppStatusBar from "../../components/AppStatusBar/AppStatusBar";
 import styles from "./styles";
 import BottomSheet from 'react-native-bottomsheet-reanimated';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import AppColor from "../../utills/AppColors";
 
 class DebitCardScreen extends Component {
   render() {
@@ -25,22 +27,17 @@ class DebitCardScreen extends Component {
             keyboardAware
             bottomSheerColor="#FFFFFF"
             ref="BottomSheet"
-            initialPosition={'65%'} //200, 300
+            initialPosition={'65%'}
             snapPoints={['65%', '100%']}
-            // isBackDrop={true}
             enabledGestureInteraction={true}
             isBackDropDismissByPress={true}
             isRoundBorderWithTipHeader={true}
-            // backDropColor="red"
-            // //isModal
-            // containerStyle={{backgroundColor:"red"}}
             tipStyle={{backgroundColor:"white"}}
             headerStyle={{borderRadius: 100}}
-            // bodyStyle={{backgroundColor:"red",flex:1}}
             header={
               <View >
                 <View style={styles.hideButton}> 
-                  <Text style={styles.currencyText} >S$</Text>
+                  <Text style={styles.hideText}> <MaterialCommunityIcons name="eye-off" color= {AppColor.themeColor}  size={16} />    Hide Card Number</Text>
                 </View>
                 <View style={styles.cardContainer}> 
                   <Text style={styles.currencyText} >S$</Text>
