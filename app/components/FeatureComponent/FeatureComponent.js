@@ -5,8 +5,11 @@ import styles from "./styles";
 export default CardComponent = (props) => {
     return (
       <View style={styles.container}>
-        <Image source={require('../../assets/aspire-logo.png')} 
+        <View style={styles.logoContainer}>
+          <Image source={require('../../assets/logo-white.png')} 
             style={styles.logoImage}/>
+          <Text style={styles.logoText}>aspire</Text>
+        </View>
         <Text style={styles.nameText}>Mark Henry</Text>
         <View style={styles.cardContainer}>
           <Text style={styles.cardText}>4242   4242   4242   4242</Text>
@@ -16,8 +19,7 @@ export default CardComponent = (props) => {
           <Text style={styles.cardText}>    </Text>
           <Text style={styles.cardText}>CVV: 456</Text>
         </View>
-        <Image source={require('../../assets/visa-logo.png')} 
-            style={styles.visalogo}/>
+        <Text style={styles.visa}>VISA</Text>
       </View>
     );
 };

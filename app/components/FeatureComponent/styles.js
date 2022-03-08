@@ -11,9 +11,22 @@ export default styles = StyleSheet.create({
         flex: 1, 
         margin:RIGHT_LEFT_MARGIN
     },
+    logoContainer: {
+        flexDirection:"row",
+        position: "absolute",
+        alignSelf:"flex-end"
+    },
     logoImage: {
+        width: LOGO_DIMENTION,
+        height: LOGO_DIMENTION,
         right: 2,
-        alignSelf:"flex-end",
+    },
+    logoText: {
+        color: AppColor.textColor,
+        justifyContent:"center",
+        alignSelf:"center",
+        fontFamily: "AvenirNextLTPro-Regular",
+        fontSize: 14,
     },
     nameText: {
         color: AppColor.textColor,
@@ -37,10 +50,12 @@ export default styles = StyleSheet.create({
         fontFamily: "AvenirNextLTPro-Regular",
         fontSize: 14,
     },
-    visalogo: {
+    visa: {
         color: AppColor.textColor,
-        right: 2,
+        position: "absolute",
         alignSelf:"flex-end",
         bottom :10,
+        fontFamily: "AvenirNextLTPro-Bold",
+        fontSize: 25,
     },
 });
