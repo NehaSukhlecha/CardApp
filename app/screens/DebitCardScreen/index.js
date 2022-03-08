@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { View, Image, Text,  SafeAreaView } from "react-native";
+import { View, Image, Text,  SafeAreaView, Animated, StyleSheet} from "react-native";
 import AppStatusBar from "../../components/AppStatusBar/AppStatusBar";
 import CardComponent from "../../components/CardComponent/CardComponent";
+import FeatureComponent from "../../components/FeatureComponent/FeatureComponent";
 import styles from "./styles";
 import BottomSheet from 'react-native-bottomsheet-reanimated';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -30,11 +31,10 @@ class DebitCardScreen extends Component {
             ref="BottomSheet"
             initialPosition={'65%'}
             snapPoints={['65%', '100%']}
-            enabledGestureInteraction={true}
-            isBackDropDismissByPress={true}
+            enabledGestureInteraction={false}
+            isBackDropDismissByPress={false}
             isRoundBorderWithTipHeader={true}
             tipStyle={{backgroundColor:"white"}}
-            headerStyle={{borderRadius: 100}}
             header={
               <View >
                 <View style={styles.hideButton}> 
@@ -43,11 +43,33 @@ class DebitCardScreen extends Component {
                 <View style={styles.cardContainer}> 
                   <CardComponent></CardComponent>
                 </View>
+
+                <View style={styles.body}> 
+                  {/* <View style={styles.progressBar}>
+                      <Animated.View style={[StyleSheet.absoluteFill], {backgroundColor: "#8BED4F", width: "50%"}}/>
+                  </View> */}
+                
+                  <FeatureComponent title="Top-up account"
+                          subTitle="Deposit money to your account to use with your card"
+                          imageSource={require("../../assets/insight.png")}/>
+                  <FeatureComponent title="Weekly Spending Limit"
+                          subTitle="your haven't set any limit on the card"
+                          imageSource={require("../../assets/limit.png")}/>
+                  <FeatureComponent title="Freeze Card"
+                          subTitle="Your debit csrd is currently active"
+                          imageSource={require("../../assets/freeze.png")}/>
+                  <FeatureComponent title="Get a new card"
+                          subTitle="This deactivated your current debit card"
+                          imageSource={require("../../assets/deactivate.png")}/>
+                  <FeatureComponent title="Deactivated Cards"
+                          subTitle="Your previously deactivted cards"
+                          imageSource={require("../../assets/info.png")}/>
+                </View>
               </View>
             }
             body={
-              <View style={styles.body}>
-                <Text style={styles.text}>Body</Text>
+              <View >
+                {/* */}
               </View>
             }
            />

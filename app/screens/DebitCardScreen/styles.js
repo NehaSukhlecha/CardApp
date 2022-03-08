@@ -93,5 +93,19 @@ export default StyleSheet.create({
       justifyContent:"center",
       fontSize: 12,
     },
+    body: {
+      width: '99%',
+      top: -30,
+      alignSelf:"flex-end",
+      borderRadius: 15,
+    },
+    progressBar: {
+      height: 20,
+      width: '100%',
+      backgroundColor: 'white',
+      borderColor: '#000',
+      borderWidth: 2,
+      borderRadius: 5
+    }
 });
   

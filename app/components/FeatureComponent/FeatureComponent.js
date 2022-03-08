@@ -1,25 +1,28 @@
 import React from 'react';
-import { View, Image, Text } from 'react-native';
+import { TouchableOpacity, View, Image, Text, Switch } from 'react-native';
+import AppColor from '../../utills/AppColors';
 import styles from "./styles";
 
 export default CardComponent = (props) => {
     return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image source={require('../../assets/logo-white.png')} 
-            style={styles.logoImage}/>
-          <Text style={styles.logoText}>aspire</Text>
+      <TouchableOpacity style={styles.container}>
+        <Image style={styles.logoImage}
+          source={props.imageSource} />
+
+        <View style={styles.subContainer}>
+          <Text style={styles.title}>{props.title}</Text>
+          <Text style={styles.subTitle}>{props.subTitle}</Text>
         </View>
-        <Text style={styles.nameText}>Mark Henry</Text>
-        <View style={styles.cardContainer}>
-          <Text style={styles.cardText}>4242   4242   4242   4242</Text>
+
+        <View style={styles.switch}>
+          <Switch 
+            thumbColor={AppColor.themeColor}
+            ios_backgroundColor={AppColor.lightGrey}
+            style={{ transform: [{ scaleX: .8 }, { scaleY: .8 }] }}
+            // onValueChange={toggleSwitch}
+            // value={isEnabled}
+          />
         </View>
-        <View style={styles.cardContainer}>
-          <Text style={styles.cardText}>Thru: 12/20</Text>
-          <Text style={styles.cardText}>    </Text>
-          <Text style={styles.cardText}>CVV: 456</Text>
-        </View>
-        <Text style={styles.visa}>VISA</Text>
-      </View>
+      </TouchableOpacity>
     );
 };
